@@ -3,7 +3,7 @@
 echo "   _____ _                _            "
 echo "  / ____| |              | |           "
 echo " | |    | |__   __ _ _ __| | ___  ___  "
-echo " | |    | '_ \ / _` |  __| |/ _ \/ __| "
+echo " | |    | |_ \ / _  |  __| |/ _ \/ __| "
 echo " | |____| | | | (_| | |  | |  __/\__ \ "
 echo "  \_____|_| |_|\__,_|_|  |_|\___||___/ "
 echo "                                       "
@@ -18,6 +18,7 @@ sleep 3
 echo "Charles >> Please enter your Interworx license key."
 read License_Interworx
 sleep 2
+echo "$License_Interworx"
 
 # Ask for Yum updated
 echo "Charles >> Have you allready updated Yum?"
