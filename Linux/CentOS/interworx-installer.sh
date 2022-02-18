@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Hello and welcome to the Interworx Installer"
 echo "I'm Charles and I wil be your guide"
 
