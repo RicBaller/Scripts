@@ -3,7 +3,6 @@
 echo "Hello and welcome to the Interworx Installer!"
 sleep 2
 echo "I'm Charles and I wil be your guide."
-
 sleep 3
 
 echo "Please enter your Interworx license key."
@@ -46,7 +45,7 @@ fi
 
 if [ "$Yum_UpToDate" == true ]; then
 sleep 2
-echo "Then I will start the installation of Interworx. If you want to cancel, you can do so within 10 seconds."
+echo "If you want to cancel, you can do so within 10 seconds."
 sleep 10
 echo "Download Interworx"
 sleep 2
@@ -58,7 +57,7 @@ sh install.sh
 
 elif [ "$Yum_UpToDate" == false ]; then
 sleep 2
-echo "We will have to update Yum first, than I will start the installation. If you want to cancel, you can do so within 10 seconds."
+echo "If you want to cancel, you can do so within 10 seconds."
 sleep 10
 echo "Update Yum"
 sleep 2
