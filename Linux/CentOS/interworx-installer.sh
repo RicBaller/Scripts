@@ -48,10 +48,14 @@ else
 fi
 
 if [ "$Yum_UpToDate" == true ]; then
+wget https://updates.interworx.com/interworx/7/install.sh
+sh install.sh
 
 
 elif [ "$Yum_UpToDate" == false ]; then
-
+yum update
+wget https://updates.interworx.com/interworx/7/install.sh
+sh install.sh
 
 fi
 echo "Interworx has now been installed on http://$(hostname -i)/nodeworx/ and http://$(hostname -i)/siteworx/!"
