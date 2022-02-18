@@ -9,7 +9,8 @@ echo "  \_____|_| |_|\__,_|_|  |_|\___||___/ "
 echo "                                       "
 echo "                                       "
 
-echo -e "harles >> Hello and welcome to the Interworx Installer!"
+# Introduction
+echo -e "Charles >> Hello and welcome to the Interworx Installer!"
 sleep 1
 echo -e "Charles >> I'm Charles and I wil be your guide."
 sleep 2
@@ -66,13 +67,15 @@ echo "System >> Download Interworx"
 sleep 2
 wget https://updates.interworx.com/interworx/7/install.sh
 sleep 1
+# Install Interworx
 echo "System >> Instal Interworx"
 sleep 2
 sh install.sh
 sleep 1
 echo "System >> Instalation complete"
 sleep 3
-echo "Charles >> Let's configure your license."
+# Start configuring Interworx
+echo "Charles >> Let's configure your Interworx."
 sleep 1
 echo "What's your admin email?"
 read AdminMail
@@ -83,6 +86,7 @@ sleep 1
 echo "What is your license key?"
 read LicenseKey
 sleep 1
+# Using information above to activate and configure Interworx
 echo "Charles >> Activating and configuring Interworx"
 ~iworx/bin/goiworx.pex --key=$LicenseKey --email=$AdminMail --password=$AdminPassword --ignorechecks
 
@@ -110,6 +114,7 @@ sh install.sh
 sleep 1
 echo "System >> Instalation complete"
 sleep 3
+# Start configuring Interworx
 echo "Charles >> Let's configure your license."
 sleep 1
 echo "What's your admin email?"
@@ -121,6 +126,7 @@ sleep 1
 echo "What is your license key?"
 read LicenseKey
 sleep 1
+# Using information above to activate and configure Interworx 
 echo "Charles >> Activating and configuring Interworx"
 ~iworx/bin/goiworx.pex --key=$LicenseKey --email=$AdminMail --password=$AdminPassword --ignorechecks
 
