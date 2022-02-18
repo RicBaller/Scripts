@@ -1,15 +1,6 @@
 echo "Hello and welcome to the Interworx Installer"
 echo "I'm Charles and I wil be your guide"
 
-echo "Press any key to continue"
-while [ true ] ; do
-read -t 3 -n 1
-if [ $? = 0 ] ; then
-exit ;
-else
-echo "waiting for the keypress"
-fi
-
 echo "Please enter your Interworx license key."
 read License_Interworx
 
