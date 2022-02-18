@@ -10,15 +10,14 @@ echo "                                       "
 echo "                                       "
 
 echo "Charles >> Hello and welcome to the Interworx Installer!"
-sleep 2
+sleep 1
 echo "Charles >> I'm Charles and I wil be your guide."
-sleep 3
+sleep 2
 
 # Ask for Key
-echo "Charles >> Please enter your Interworx license key."
-read License_Interworx
-sleep 2
-echo "$License_Interworx"
+echo "Charles >> Do you have your license key? If you don't, please ctrl+c to exit now and get your key ready."
+echo "System >> You have 10 seconds to cancel"
+sleep 10
 
 # Ask for Yum updated
 echo "Charles >> Have you allready updated Yum?"
@@ -70,6 +69,24 @@ sleep 1
 echo "System >> Instal Interworx"
 sleep 2
 sh install.sh
+sleep 1
+echo "System >> Instalation complete"
+sleep 3
+echo "Charles >> Let's configure your license."
+sleep 1
+echo "What's your admin email?"
+read AdminMail
+sleep 1
+echo "What is your admin password?"
+read AdminPassword
+sleep 1
+echo "What is your license key?"
+read LicenseKey
+sleep 1
+echo "Charles >> Activating and configuring Interworx"
+~iworx/bin/goiworx.pex --key=$LicenseKey --email=$AdminMail --password=$AdminPassword --ignorechecks
+
+
 
 elif [ "$Yum_UpToDate" == false ]; then
 sleep 2
@@ -90,6 +107,22 @@ sleep 1
 echo "System >> Instal Interworx"
 sleep 2
 sh install.sh
+sleep 1
+echo "System >> Instalation complete"
+sleep 3
+echo "Charles >> Let's configure your license."
+sleep 1
+echo "What's your admin email?"
+read AdminMail
+sleep 1
+echo "What is your admin password?"
+read AdminPassword
+sleep 1
+echo "What is your license key?"
+read LicenseKey
+sleep 1
+echo "Charles >> Activating and configuring Interworx"
+~iworx/bin/goiworx.pex --key=$LicenseKey --email=$AdminMail --password=$AdminPassword --ignorechecks
 
 fi
 # Summary and general info
@@ -97,4 +130,4 @@ sleep 2
 echo "Charles >> Interworx has now been installed on http://$(hostname -i)/nodeworx/ and http://$(hostname -i)/siteworx/!"
 echo "Charles >> Have a look at http://$(hostname -i)/nodeworx/ to complete the setup of Interworx."
 
-done
+quit
