@@ -27,8 +27,6 @@ sleep 1
 echo -e "Charles >> I'm Charles and I wil be your guide."
 sleep 2
 
-apt update
-
 # Just for the heck of it: how to create a variable where to jump to:
 start=${1:-"start"}
 goto "$start"
@@ -47,5 +45,4 @@ echo "$goto_msg"
 goto_msg="Ended..."
 echo "$goto_msg"
 
-# following doesn't jump to apt update whereas original does
-goto update
+
