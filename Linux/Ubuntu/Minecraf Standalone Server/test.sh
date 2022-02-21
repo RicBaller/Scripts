@@ -45,13 +45,3 @@ goto continue
 : continue
 goto_msg="Ended..."
 echo "$goto_msg"
-goto apt
-
-: apt
-apt update
-apt install git build-essential
-goto jre
-
-: jre
-apt install openjdk-8-jre-headless
-java -version
