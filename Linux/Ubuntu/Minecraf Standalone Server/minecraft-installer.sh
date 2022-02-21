@@ -45,4 +45,10 @@ echo "$goto_msg"
 goto_msg="Ended..."
 echo "$goto_msg"
 
+: apt
+apt update
+apt install git build-essential
 
+: jre
+apt install openjdk-8-jre-headless
+java -version
