@@ -136,3 +136,11 @@ fi
 sleep 2
 echo "Charles >> Interworx has now been installed on http://$(hostname -i)/nodeworx/ and http://$(hostname -i)/siteworx/!"
 echo "Charles >> Have a look at http://$(hostname -i)/nodeworx/ to complete the setup of Interworx."
+echo "Charles >> If you have any problems with the installation, try running the installer again."
+echo "Charles >> If your problem still exists, run every command seperately or contact Interworx support."
+echo "Charles >> Thank you for using the Interworx Installer!"
+echo "Charles >> Have a nice day!"
+sleep 3
+echo "Credits for installer: by https://github.com/RicBaller/Scripts/tree/main/Linux/CentOS/Interworx/"
+sleep 3
+exit
