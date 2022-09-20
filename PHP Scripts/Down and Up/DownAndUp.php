@@ -3,9 +3,9 @@
 // bot.php
 
 // Variables
-    $maxcount = 1385;
+    $maxcount = 1000;
     $username = "username";
-    $wachtwoord = "password";
+    $password = "password";
     $sleep = 1;
     $count = 1;
     $domain = "http://www.domain.com";
@@ -41,12 +41,12 @@
         exit;
     } else {
         echo "Logged in to $ftp_server, for user $ftp_user_name\n";
-    }
+}
 
 // Loop
     // While count is less than maxcount download the file using the url variable and save it as the count variable with .pdf extension. Echo every filename that is downloaded.
     while ($count < $maxcount) {
-        $url = 'https://' . $domain . '/gen_invoice_pdf.php?id=' . $count . "&us=" . $username . "&pw=" . $wachtwoord;
+        $url = 'https://' . $domain . '/gen_invoice_pdf.php?id=' . $count . "&us=" . $username . "&pw=" . $password;
         $file_name = basename($file_prefix.$count.".pdf");
         if (file_put_contents($file_name, file_get_contents($url)))
         {
